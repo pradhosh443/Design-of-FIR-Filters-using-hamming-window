@@ -1,10 +1,10 @@
 # Design-of-FIR-Filters-using-hamming-window
 
-# DESIGN OF HIGH PASS FIR DIGITAL FILTER 
+# DESIGN OF LOW PASS FIR DIGITAL FILTER 
 
 # AIM: 
           
-  To generate design of high pass FIR digital filter using SCILAB 
+  To generate design of low pass FIR digital filter using SCILAB 
 
 # APPARATUS REQUIRED: 
 
@@ -58,8 +58,9 @@ xgrid();
 
 
 # OUTPUT
-<img width="1100" height="900" alt="image" src="https://github.com/user-attachments/assets/357f3032-092b-42d0-ab5b-6a44945836a6" />
+<img width="1100" height="900" alt="image" src="https://github.com/user-attachments/assets/51d8fd11-eb63-457b-828e-7493c19aed95" />
+
 
 
 # RESULT
-The High Pass FIR digital filter was successfully designed and its waveform was plotted using the Hamming window method in Scilab.
+The Low Pass FIR digital filter was successfully designed and its waveform was plotted using the Hamming window method in Scilab.
