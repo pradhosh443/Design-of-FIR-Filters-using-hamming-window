@@ -11,7 +11,7 @@
   PC Installed with SCILAB 
 
 # PROGRAM 
-```clc;
+```
 clear;
 close;
 
@@ -22,18 +22,18 @@ fc = 0.4;          // Normalized cutoff frequency (0 to 0.5)
 // Sample points
 n = 0:M;
 
-// Ideal impulse response of High Pass Filter
+// Ideal impulse response of Low Pass Filter
 hd = zeros(1, M+1);
 for i = 1:M+1
     if i == (M/2 + 1) then
-        hd(i) = 1 - 2*fc;
+        hd(i) = 2 * fc;
     else
-        hd(i) = (-sin(2*%pi*fc*(i - (M/2 + 1)))) / (%pi*(i - (M/2 + 1)));
+        hd(i) = sin(2 * %pi * fc * (i - (M/2 + 1))) / (%pi * (i - (M/2 + 1)));
     end
 end
 
 // Hamming window
-w = 0.54 - 0.46 * cos(2*%pi*n/M);
+w = 0.54 - 0.46 * cos(2 * %pi * n / M);
 
 // Apply window
 h = hd .* w;
@@ -43,7 +43,7 @@ figure(1);
 plot(n, h);
 xlabel("n");
 ylabel("h(n)");
-title("Impulse Response of High Pass FIR Filter using Hamming Window");
+title("Impulse Response of Low Pass FIR Filter using Hamming Window");
 xgrid();
 
 // Frequency Response
@@ -52,8 +52,9 @@ figure(2);
 plot(f, H);
 xlabel("Normalized Frequency");
 ylabel("|H(f)|");
-title("Magnitude Response of High Pass FIR Filter using Hamming Window");
+title("Magnitude Response of Low Pass FIR Filter using Hamming Window");
 xgrid();
+
 ```
 
 
